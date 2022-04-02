@@ -1,10 +1,16 @@
 import Head from "next/head";
-import "flowbite";
+
 import ProductCard from "../componets/ProductCard";
 import React from "react";
 import Header from "../componets/Header";
 import Footer from "../componets/Footer";
 import useFetch from "use-http";
+
+  if (typeof window !== "undefined") {
+    const module = await import("flowbite")
+    return module;
+  }
+
 export default function Home() {
   const {data} = useFetch("/api/hello", []);
   const products = data?.products;
