@@ -3,10 +3,14 @@ import ProductCard from "../componets/ProductCard";
 import React from "react";
 import Header from "../componets/Header";
 import Footer from "../componets/Footer";
-import useFetch from "use-http";
+import useFetch, { CachePolicies } from "use-http";
 
 export default function Home() {
-  const { data } = useFetch("/api/hello", []);
+  const { data } = useFetch(
+    "/api/hello",
+    { cachePolicy: CachePolicies.NO_CACHE },
+    []
+  );
   const products = data?.products;
   return (
     <>
