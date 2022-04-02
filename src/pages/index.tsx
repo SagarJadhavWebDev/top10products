@@ -1,12 +1,11 @@
 import Head from "next/head";
-
 import ProductCard from "../componets/ProductCard";
 import React from "react";
 import Header from "../componets/Header";
 import Footer from "../componets/Footer";
 import useFetch from "use-http";
-//@ts-ignorets-ignore
-import flowbite from "../pages/flowbite"
+
+
 
 export default function Home() {
   const { data } = useFetch("/api/hello", []);
