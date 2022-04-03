@@ -15,7 +15,7 @@ const Footer = () => {
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              ProductBite
             </span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 mb-0 dark:text-gray-400">
